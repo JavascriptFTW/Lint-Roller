@@ -1,20 +1,7 @@
-#
-# start.py
-#
-
-def stripNewlines(line):
-    strippedLine = "";
-
-    for character in line:
-        if character != "\n":
-            strippedLine += character
-
-
-    return strippedLine
+from Javascript import *
 
 def main():
-    inputFile = open("test.js", "r+")
-    for line in inputFile:
-        print stripNewlines(line)
+    jsLinter = JavascriptLinter("test.js")
+    jsLinter.lintFile()
 
 main()
